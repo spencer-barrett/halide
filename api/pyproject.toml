@@ -8,6 +8,7 @@ dependencies = [
     "fastapi[standard]>=0.128.8",
     "psycopg[binary]>=3.2.13",
     "pydantic-settings>=2.11.0",
+    "pyjwt[crypto]>=2.13.0",
     "sqlalchemy>=2.0.52",
     "uvicorn>=0.39.0",
 ]
@@ -18,3 +19,9 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/halide_api"]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=8.4.2",
+]

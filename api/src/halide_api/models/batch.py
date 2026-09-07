@@ -20,3 +20,4 @@ class Batch(Base):
     asset_count: Mapped[int | None]
     verified_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     device_deleted_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    owner_id: Mapped[str] = mapped_column(String(64), index=True)

@@ -12,6 +12,10 @@ class Settings(BaseSettings):
     database_url: str
     database_url_pooled: str
     database_dev: str
+    database_test: str
+    auth0_domain: str
+    auth0_audience: str
+    auth0_algorithms: str
 
 settings = Settings() # type: ignore
 
